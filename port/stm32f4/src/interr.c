@@ -11,10 +11,17 @@
 #include "stm32f4xx.h"
 
 /**
- * @brief Interrupt service routine for the System tick timer (SysTick).
+ * @brief This function handles the System tick timer that increments the system millisecond counter.
+ *
+ * > **TO-DO alumnos:**
+ * >
+ * > ✅ 1. **Increment the System tick counter `msTicks` in 1 count.** 
+ *  `msTicks` is a `static volatile` variable declared in @link port_system.c @endlink. \n
+ * Use set and get functions from port_system.c in order to modify it.
+ *
+ * @warning **The variable `msTicks` must be declared volatile!** Just because it is modified in this ISR, in order to avoid [*race conditions*](https://en.wikipedia.org/wiki/Race_condition)
+. **Add it to the definition** after *static*.
  * 
- * @note This ISR is called when the SysTick timer generates an interrupt.
- * The program flow jumps to this ISR and increments the tick counter by one millisecond.
  */
 void SysTick_Handler(void)
 {
