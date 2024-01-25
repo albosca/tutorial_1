@@ -21,7 +21,7 @@
 // PRIVATE (STATIC) VARIABLES
 //------------------------------------------------------
 
-static volatile uint32_t msTicks = 0; /*!< Variable to store millisecond ticks. @warning **It must be declared volatile!** Just because it is modified in an ISR. **Add it to the definition** after *static*. */
+static uint32_t msTicks = 0; /*!< Variable to store millisecond ticks. @warning **It must be declared volatile!** Just because it is modified in an ISR. **Add it to the definition** after *static*. */
 
 //------------------------------------------------------
 // PUBLIC (GLOBAL) VARIABLES
@@ -158,7 +158,7 @@ void port_system_delay_until_ms(uint32_t *t, uint32_t ms)
 
 uint32_t port_system_get_millis()
 {
-  //return msTicks;
+  return 0;//msTicks;
 }
 
 
