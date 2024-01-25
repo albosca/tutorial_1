@@ -30,29 +30,23 @@
 void port_led_gpio_setup(void);
 
 /**
- * @brief  Gets the current state of the LED.
- * @retval true if the LED is on, false otherwise
-*/
+ * @brief returns the LED state.
+ *
+ * > **TO-DO alumnos:**
+ * >
+ * > ✅ 1. Read current LED value in IDR register \n
+ * > ✅ 2. Return the value as a bool variable
+ *
+ */
 bool port_led_get(void);
 
-/**
- * @brief  Sets the LED state.
- * @param  state: true to turn the LED on, false to turn it off
- */
-void port_led_on(void);
-
-/**
- * @brief  Sets the LED state.
- * @param  state: true to turn the LED on, false to turn it off
- */
-void port_led_off(void);
 
 /**
  * @brief toggles the LED
  *
  * > **TO-DO alumnos:**
  * >
- * > ✅ 1. Read current LED value in IDR register \n
+ * > ✅ 1. Get current LED value \n
  * > ✅ 2. Depending on its current value, set LED's new value in ODR register
  *
  */
