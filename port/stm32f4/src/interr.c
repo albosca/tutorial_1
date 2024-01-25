@@ -18,5 +18,5 @@
  */
 void SysTick_Handler(void)
 {
-  //port_system_set_millis(port_system_get_millis() + 1);
+  
 }
